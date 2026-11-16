@@ -1,0 +1,7 @@
+Month-end review 09.2026 | period deadline 2026-10-07
+Expense overview source total: EUR 7640.00
+Provisions suggested: EUR 2438.00 (3 rows); check first: 2.
+Reclass: EUR 1780.00 (4 invoices).
+For info – shared services: EUR 820.00 (1 invoices).
+Please check: DEMO-109: posted invoice and new accrual in same month; verify potential double booking
+Excluded: older approval months, post-cutoff approvals, credit notes and previous accrual reversals.

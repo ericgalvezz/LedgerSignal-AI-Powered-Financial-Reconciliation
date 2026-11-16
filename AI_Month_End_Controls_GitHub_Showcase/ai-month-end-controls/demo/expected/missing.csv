@@ -1,0 +1,6 @@
+Supplier,Invoice,Account,Month,Amount,Currency,Amount (EUR),Action,Note
+Demo Vendor Beta,DEMO-101,61120,09.2026,1250.00,EUR,1250.00,Add provision,
+Demo Vendor Gamma,DEMO-102,61120,09.2026,600.00,GBP,708.00,Add provision,EUR estimated using observed demo ledger rate
+Demo Vendor Nu,DEMO-112,61120,08.2026,480.00,EUR,480.00,Add provision,
+Demo Vendor Delta,DEMO-103,61110,09.2026,1450.00,EUR,1450.00,Check first,Approved 1450.00 EUR vs booked 700.00 EUR; verify
+Demo Vendor Epsilon,DEMO-104,61110,09.2026,,EUR,,Check first,Missing amount; Currency assumed; verify

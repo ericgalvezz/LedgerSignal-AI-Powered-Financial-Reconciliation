@@ -1,0 +1,14 @@
+vendor,invoice,account,cost_center,project,month,description,currency,transaction_amount,reporting_eur,event_type,category
+Demo Vendor Alpha,DEMO-100,61110,TEAM-OPS,PRJ-A,09.2026,Professional services invoice,EUR,900.00,900.00,posted,eligible
+Demo Vendor Alpha,DEMO-100,61120,TEAM-OPS,PRJ-A,09.2026,Admin fee,EUR,400.00,400.00,posted,eligible
+Demo Vendor Gamma,DEMO-GBP-REF,61120,TEAM-OPS,PRJ-REF,09.2026,FX rate reference only,GBP,500.00,590.00,posted,eligible
+Demo Vendor Delta,DEMO-103,61110,TEAM-OPS,PRJ-D,09.2026,Partial amount,EUR,700.00,700.00,posted,eligible
+Demo Vendor Zeta,DEMO-105,61110,TEAM-OTHER,PRJ-F,09.2026,Wrong unit,EUR,350.00,350.00,posted,eligible
+Demo Vendor Eta,DEMO-106,61110,TEAM-OPS,PRJ-WRONG,09.2026,Wrong project,EUR,500.00,500.00,posted,eligible
+Demo Vendor Theta,DEMO-107,61110,TEAM-OPS,PRJ-H,09.2026,Wrong account,EUR,690.00,690.00,posted,eligible
+Demo Vendor Iota,DEMO-108,61120,TEAM-TRANSIT,PRJ-I,09.2026,Shared center,EUR,820.00,820.00,posted,eligible
+Demo Vendor Kappa,DEMO-109,61110,TEAM-OPS,PRJ-J,09.2026,Posted invoice,EUR,1500.00,1500.00,posted,eligible
+Demo Vendor Kappa,DEMO-109,61110,TEAM-OPS,PRJ-J,09.2026,New accrual same invoice,EUR,1500.00,1500.00,new_accrual,eligible
+Demo Vendor Omicron,DEMO-114,61110,TEAM-OPS,PRJ-MISC,09.2026,Office catering,EUR,240.00,240.00,posted,out_of_scope
+Demo Vendor Pi,DEMO-115,61110,TEAM-OPS,PRJ-OLD,09.2026,Prior period accrual reversal,EUR,-800.00,-800.00,reversal,eligible
+Demo Vendor Rho,DEMO-116,13880,,PRJ-BS,09.2026,Balance sheet movement,EUR,250.00,250.00,posted,eligible

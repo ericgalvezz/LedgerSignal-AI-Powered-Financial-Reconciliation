@@ -1,0 +1,6 @@
+Hello team, here is the fictional expense reconciliation feedback for 09.2026:
+- Proposed accruals: EUR 2438.00 (3 lines).
+- Items to verify: 2.
+- Reallocations: EUR 1780.00 (4 invoices).
+- Shared-services items for information: EUR 820.00.
+Please check the attached synthetic review before any accounting action.

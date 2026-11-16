@@ -1,0 +1,6 @@
+Type,Supplier,Invoice,Account(s),Amount (EUR),Currency,Booked to,Expected,Finding,In approval journal?
+Reclass,Demo Vendor Zeta,DEMO-105,61110,350.00,EUR,TEAM-OTHER | PRJ-F,TEAM-OPS | PRJ-F,Organization mapping differs,Yes
+Reclass,Demo Vendor Eta,DEMO-106,61110,500.00,EUR,TEAM-OPS | PRJ-WRONG,TEAM-OPS | PRJ-G,Project allocation differs,Yes
+Reclass,Demo Vendor Theta,DEMO-107,61110,690.00,EUR,TEAM-OPS | PRJ-H,TEAM-OPS | PRJ-H,Expense account differs,Yes
+Reclass,Demo Vendor Omicron,DEMO-114,61110,240.00,EUR,TEAM-OPS | PRJ-MISC,Not in approval journal,Expense nature requires reclassification,No
+For info – shared services,Demo Vendor Iota,DEMO-108,61120,820.00,EUR,TEAM-TRANSIT | PRJ-I,TEAM-TRANSIT | PRJ-I,Shared-services center; informational,Yes

@@ -1,0 +1,18 @@
+{
+  "month": "09.2026",
+  "deadline": "2026-10-07",
+  "ledger_control_total_eur": "7640.00",
+  "provision_total_eur": "2438.00",
+  "provision_lines": 3,
+  "check_first_lines": 2,
+  "reclass_total_eur": "1780.00",
+  "reclass_invoices": 4,
+  "info_total_eur": "820.00",
+  "info_invoices": 1,
+  "please_check": [
+    "DEMO-109: posted invoice and new accrual in same month; verify potential double booking"
+  ],
+  "fx_rates_for_demo": {
+    "GBP": "1.1800"
+  }
+}
