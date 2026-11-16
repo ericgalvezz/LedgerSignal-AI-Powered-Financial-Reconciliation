@@ -1,24 +1,80 @@
-# Business case and solution ownership
+# Business case — from manual review to a transferable workflow
 
-## Problem statement
-In a recurring month-end process, Finance has booked expenses and another team has approved supplier invoices. Neither dataset alone answers the two operational questions: what is missing and what has been allocated incorrectly? Manual comparison carries high cognitive load because references, currency and accounting dimensions may differ.
+[Back to the LedgerSignal overview](../README.md)
 
-## Target operating model
-A trained reviewer provides two files and the review month. A reusable AI Skill applies a written policy for scope, matching, currency, classification and output. The reviewer checks any suggested adjustment against its source, corrects the source journal if necessary, and forwards concise feedback to Finance.
+## 1. The situation
 
-## Human-owned decisions
-A responsible analyst remains accountable for (a) whether invoice approval is accurate, (b) whether a matching posting is truly absent, (c) the nature of each expense, (d) whether the account/cost center/project mapping should change, and (e) whether Finance should post anything.
+In many businesses, one team approves supplier invoices while Finance maintains the records of what has been booked. Both sources describe part of the same activity, but they are not automatically aligned.
 
-## Solution-design contributions illustrated
-- Translate two messy business questions into mutually understandable outcomes.
-- Specify data input contracts and date-scope rules.
-- Distinguish absent postings from source-quality problems and mapping errors.
-- Make uncertainty explicit instead of presenting a confident wrong answer.
-- Establish one concise output that stakeholders can reuse each close.
-- Build a handover-friendly, explainable workflow with a predictable invocation pattern.
+At month-end, a reviewer needs to spot expenses that may be missing, amounts that do not match, and charges that may have been assigned to the wrong team, project, or account. Reviewing those differences manually requires familiarity with dates, invoice references, currencies, and how the business actually operates.
 
-## Why a Skill rather than one long prompt?
-The same business rules must be applied repeatedly, by different people, across successive review months. A dedicated Skill encapsulates those rules and output expectations, while lightweight project instructions tell the team what to attach and what prompt to use. The goal is **process consistency and transferability**, not autonomous accounting.
+The challenge is not merely that spreadsheets are inconvenient. It is that **repeatable decisions are hidden inside one person's manual review process**.
 
-## Outcome evidence in this public repository
-The demo proves that a *synthetic fixture* can be processed to produce testable action categories. It does **not** prove any real company's control performance or a production-system deployment. Public numbers should be interpreted exclusively as invented demonstration metrics.
+## 2. The opportunity
+
+The guiding question was:
+
+> Could we make this monthly check faster and easier to hand over, while preserving the reviewer's judgment on uncertain financial items?
+
+The desired outcome was a practical workflow, not an autonomous accounting system: a colleague should be able to provide the right inputs, follow the same decision logic, and receive a clear list of issues to confirm.
+
+## 3. The solution approach
+
+The work was organized around five design choices:
+
+1. **Two clear inputs:** an invoice-approval record and a Finance expense record, both provided by the user.
+2. **A defined review period:** avoid mixing prior months, late approvals, and current activity indiscriminately.
+3. **A small number of useful outcomes:** potential missing expense, possible incorrect allocation, needs verification, and information only.
+4. **Human validation before action:** a flagged item is a question to investigate, not proof that an accounting entry must be made.
+5. **Predictable outputs:** a short written summary, a structured workbook, and a draft response suitable for the next stakeholder discussion.
+
+A reusable **Claude Skill** stores the workflow instructions so the process does not depend on repeatedly writing a long prompt. Separate project instructions explain how team members start a new review, which files to attach, and what to check before sending feedback.
+
+## 4. My role and ownership
+
+This was a business-led solution-design initiative, involving more than building an AI instruction file.
+
+- **Process analysis:** identified the recurring manual workload and the decisions hidden within it.
+- **Requirements and control design:** defined what the review should compare, how exceptions should be grouped, and when the correct result is 'check first'.
+- **AI-enabled implementation:** designed and iterated the Skill, reviewed results, and improved instructions based on observed issues.
+- **Quality assurance:** tested edge cases and challenged unsupported recommendations, including situations where the source approval record might itself be wrong.
+- **Rollout and enablement:** created accessible project instructions, shared the workflow with users, and supported hands-on onboarding, training, and QA.
+- **Operational handover:** reduced reliance on the creator's memory by making expectations and review steps explicit.
+
+Technical implementation mattered, but the central contribution was **turning business understanding into a process that others could use**.
+
+## 5. What changed
+
+| Dimension | Previous approach | Designed approach |
+|---|---|---|
+| Execution | Manual cross-checking and ad hoc investigation | Guided monthly review of two supplied files |
+| Consistency | Dependent on reviewer knowledge | Written rules, cutoff logic, and repeatable output |
+| Visibility | Mismatches require individual investigation | Findings grouped by what a human should do next |
+| Quality | Greater risk of treating every difference as an error | Explicit 'check first' and information-only routes |
+| Communication | Findings summarized manually | Structured review workbook and response draft |
+| Continuity | Knowledge held by an individual | Project instructions, onboarding, and handover |
+
+### Reported operational time
+
+The original workflow was reported to take approximately **2–3 hours** manually, versus approximately **20–50 minutes** with the Skill and human review. This is **self-reported operational experience**, not a controlled time study. It is not derived from the fictional demonstration dataset and should not be presented as a verified average or a financial ROI.
+
+## 6. Why human review stays central
+
+Neither input should be assumed to be perfect. An approved invoice may contain a typing error; Finance may have booked the same economic cost using a different reference; a cross-team posting may be legitimate; and a missing amount may be impossible to convert reliably without further evidence.
+
+The workflow is designed to **surface questions and separate levels of certainty**, not to post entries or make authoritative accounting decisions. A trained reviewer checks the source and confirms any suggested action with Finance.
+
+## 7. What the public project actually proves
+
+LedgerSignal is an **independently authored public reconstruction** using invented vendors, invoice numbers, accounts, cost centers, amounts, and scenarios. It is not a release of an employer's files or proprietary Skill.
+
+- The [example inputs](../demo/inputs/) show what a controlled sample review looks like.
+- The [reference code](../src/reconcile_demo.py) produces deterministic findings from the fictional CSV data.
+- The [tests](../tests/) verify 14 specific scenarios in that reference engine.
+- The [example Claude Skill](../skills/month-end-expense-review/SKILL.md) illustrates the AI-assisted workflow approach, but has not been separately proven to reproduce the Python output in every Claude runtime.
+
+See [validation details](validation.md) and [control design](control-design.md) for deeper technical notes.
+
+## 8. Broader relevance
+
+The same solution-design pattern is useful beyond financial close: **understand two sources, define an operating policy, surface exceptions, and keep people responsible for decisions**. The transferable skills are process discovery, decision design, AI enablement, validation, and adoption—not expertise in a single accounting system.
