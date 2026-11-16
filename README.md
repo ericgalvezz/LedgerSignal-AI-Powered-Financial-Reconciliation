@@ -1,6 +1,6 @@
-# AI-Powered Month-End Controls
+# LedgerSignal — AI-Powered Financial Reconciliation
 
-**Business-led process design · Claude Skill · Finance operations · Human-in-the-loop review**
+**Intelligent month-end expense controls · Finance operations · Exception management · Human-in-the-loop review**
 
 > **Entirely synthetic public demonstration.** Every vendor, transaction, invoice, project, account, cost-center label, document, currency amount, period-specific decision, and test result in this repository belongs to an independently authored fictional scenario. **This repository does not contain the original workplace Skill, actual company inputs, private documentation, or internal configurations.** The demonstrator is not an accounting system and performs no financial postings.
 
