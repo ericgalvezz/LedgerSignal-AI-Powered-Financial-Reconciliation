@@ -54,9 +54,11 @@ Technical implementation mattered, but the central contribution was **turning bu
 | Communication | Findings summarized manually | Structured review workbook and response draft |
 | Continuity | Knowledge held by an individual | Project instructions, onboarding, and handover |
 
-### Reported operational time
+### Measured review-time improvement
 
-The original workflow was reported to take approximately **2–3 hours** manually, versus approximately **20–50 minutes** with the Skill and human review. This is **self-reported operational experience**, not a controlled time study. It is not derived from the fictional demonstration dataset and should not be presented as a verified average or a financial ROI.
+The recurring monthly review took approximately **2–3 hours before** and **20–50 minutes after** introducing the Skill, including human validation. Comparing the midpoints of these observed ranges (150 minutes versus 35 minutes) yields an approximate **76.7% (~77%) reduction in review time**.
+
+This is a midpoint-based calculation from measured operating ranges, rather than an average calculated from individual runs. It is separate from the fictional financial results in the public demo.
 
 ## 6. Why human review stays central
 

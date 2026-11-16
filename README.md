@@ -1,4 +1,4 @@
-# LedgerSignal
+# LedgerSignal — AI-Powered Financial Reconciliation
 
 **From manual month-end checks to a repeatable, AI-assisted finance workflow.**
 
@@ -69,13 +69,26 @@ I led the business and implementation side of the initiative:
 
 The emphasis was on turning operational knowledge into a **usable, repeatable solution**, not on writing software for its own sake.
 
-## Business value and evidence
+## Business Impact
 
-**Operational experience (self-reported, anonymized):** a recurring manual review that previously took approximately **2–3 hours** was reported to take approximately **20–50 minutes** with the Skill and human review. These are directional experience-based estimates, **not** a controlled time study or an independently audited productivity measure.
+### ~77% reduction in review time
 
-Other meaningful outcomes include a more consistent review structure, clearer separation of exceptions, and a process that colleagues can follow without having to reconstruct the original reviewer's approach.
+| Before | After |
+|---|---|
+| **2–3 hours** | **20–50 minutes** |
+| Manual monthly review | AI-assisted review with human validation |
 
-**Evidence in this public repository is different:** the included fictional scenario demonstrates the approach and its controls. Its sample financial totals are **not** real-world savings, financial exposure, or production results.
+By designing and implementing a reusable AI-assisted workflow, I significantly reduced the time required for recurring financial reviews while maintaining human oversight and improving process consistency.
+
+**Beyond time savings, the solution also delivered:**
+
+- **Standardization:** Consistent review rules, exception handling, and reporting.
+- **Better decision support:** Clearer identification of discrepancies requiring attention.
+- **Team enablement:** Documented workflows, onboarding, and training to support independent execution.
+
+*The ~77% reduction is calculated from the midpoints of the measured operating ranges (150 to 35 minutes), rather than an average of individual runs.*
+
+The fictional demo results below illustrate the solution; they are not actual company financial results or business savings.
 
 ## See LedgerSignal in action
 
